@@ -1,0 +1,10 @@
+api:
+  id: "15684360"
+# Mongo DB Configuration
+mongo:
+  db:
+    uri: "?"
+    host: "localhost:27017"
+    username: "customer-db"
+    password: "sq5010"
+    database: "customer-db"

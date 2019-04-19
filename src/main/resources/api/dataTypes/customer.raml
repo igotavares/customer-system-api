@@ -1,0 +1,42 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  id?:
+    type: string
+    required: false
+  name:
+    type: string
+    required: true
+  surname:
+    type: string
+    required: true
+  documentNumber:
+    type: string
+    required: true
+  gender:
+    enum: [F, M]
+    required: true
+  birthday:
+    type: date-only
+    required: true
+  email:
+    pattern: ^.+@.+\..+$
+    type: string
+    required: true
+  contact:
+    type: !include contact.raml
+    required: true
+  company:
+    type: string
+    required: false
+  address:
+    type: !include address.raml
+    required: true
+  acceptMarketing:
+    type: boolean
+    required: true
+  comments:
+    type: string
+    required: false
+examples: !include ../examples/customer-example.raml
